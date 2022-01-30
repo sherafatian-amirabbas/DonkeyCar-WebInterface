@@ -114,7 +114,7 @@
 
             console.log("message received!");
             if (handler != null)
-                handler();
+                handler(e);
         };
 
         return this;
@@ -144,9 +144,6 @@
         return this;
     };
 
-
-
-    // socketEndpoint = "donkey-new392:8887/wsDrive"
-    socketEndpoint = "192.168.1.9:8887/wsDrive"
+    socketEndpoint = "192.168.1.9:8887/wsVideo"
     return new DonkeyCar(socketEndpoint);
 }();

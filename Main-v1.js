@@ -9,6 +9,11 @@ key_s = 83
 $(document).ready(function(){
 
     Donkey.OpenSocket()
+    Donkey.OnMessage(function(e){ 
+        var objectURL = URL.createObjectURL(e.data);
+        //console.log(objectURL);
+        document.getElementById("ItemPreview").src = objectURL;
+     });
 });
 
 $(document).on('keydown',function(e){

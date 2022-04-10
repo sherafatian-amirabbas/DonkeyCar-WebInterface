@@ -147,6 +147,7 @@
 
 
     // socketEndpoint = "donkey-new392:8887/wsDrive"
-    socketEndpoint = "192.168.1.9:8887/wsDrive"
+    // socketEndpoint = "192.168.1.9:8887/wsDrive"
+    socketEndpoint = "192.168.137.153:8887/wsDrive"
     return new DonkeyCar(socketEndpoint);
 }();

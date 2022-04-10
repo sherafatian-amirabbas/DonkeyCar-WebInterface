@@ -68,7 +68,7 @@
     };
 
     // the webosocket connection added to the source to consume the camera
-    // socketEndpoint = "192.168.1.9:8887/wsVideo"
-    socketEndpoint = "192.168.137.153:8887/wsVideo"
+    // socketEndpoint = "192.168.1.9:8080/wsVideo"
+    socketEndpoint = "192.168.137.153:8080/wsVideo"
     return new DonkeyCar(socketEndpoint);
 }();

@@ -8,8 +8,10 @@ key_s = 83
 
 $(document).ready(function(){
 
-    Donkey.OpenSocket()
-    Donkey.OnMessage(function(e){ 
+    DonkeyDrive.OpenSocket();
+
+    DonkeyVideo.OpenSocket();
+    DonkeyVideo.OnMessage(function(e){ 
         var objectURL = URL.createObjectURL(e.data);
         //console.log(objectURL);
         document.getElementById("ItemPreview").src = objectURL;
@@ -22,22 +24,22 @@ $(document).on('keydown',function(e){
     {
         case arrow_up:
         {
-            Donkey.MoveForward();
+            DonkeyDrive.MoveForward();
             break;
         }
         case arrow_down:
         {
-            Donkey.MoveBackward();
+            DonkeyDrive.MoveBackward();
             break;
         }
         case arrow_left:
         {
-            Donkey.ToTheLeft();
+            DonkeyDrive.ToTheLeft();
             break;   
         }
         case arrow_right:
         {
-            Donkey.ToTheRight();
+            DonkeyDrive.ToTheRight();
             break;
         }
     }
@@ -52,17 +54,17 @@ $(document).on('keyup',function(e){
         case arrow_up:
         case arrow_down:
         {
-            Donkey.StopDriving();
+            DonkeyDrive.StopDriving();
             break;
         }
         case key_d:
         {
-            Donkey.DriveWithDefaults();
+            DonkeyDrive.DriveWithDefaults();
             break;
         }
         case key_s:
         {
-            Donkey.StopDriving();
+            DonkeyDrive.StopDriving();
             break;
         }
     }

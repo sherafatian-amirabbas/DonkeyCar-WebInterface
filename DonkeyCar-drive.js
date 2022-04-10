@@ -3,7 +3,7 @@
  // similar to the web interface but joystick mode
  
  
- Donkey = function(){
+ DonkeyDrive = function(){
 
     defaultAngle = 0.0;
     defaultSpeedForward = 1.0;
@@ -144,6 +144,7 @@
         return this;
     };
 
-    socketEndpoint = "192.168.1.9:8887/wsVideo"
+    // socketEndpoint = "192.168.1.9:8887/wsDrive"
+    socketEndpoint = "192.168.137.153:8887/wsDrive"
     return new DonkeyCar(socketEndpoint);
 }();
